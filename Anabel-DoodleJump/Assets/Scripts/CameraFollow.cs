@@ -13,10 +13,11 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(target.position.y > transform.position.y) {
-            transform.position = new Vector3(target.transform.position.x, target.transform.position.y, target.transform.position.z);
+        if(target.position.y > transform.position.y)
+        {
+            transform.position = new Vector3(target.transform.position.x, target.transform.position.y, 0);
         }
     }
 }

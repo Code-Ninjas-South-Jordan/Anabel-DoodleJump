@@ -35,7 +35,7 @@ public class PlayerControls : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
-        if(rb.velocity > 0 && transform.position.y > topScore)
+        if(rb.velocity.y > 0 && transform.position.y > topScore)
         {
             topScore = transform.position.y;
         }
@@ -45,6 +45,7 @@ public class PlayerControls : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
+        //why why why why is this a thing why why why is this a thing thing why why why
         velocity.x = movement;
         rb.velocity = velocity;
     }
